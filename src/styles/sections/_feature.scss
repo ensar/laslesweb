@@ -1,0 +1,41 @@
+.feature{
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   margin:80px 0;
+   &-title{
+       display: flex;
+       flex-direction: column;
+       text-align: center;
+       h1{
+           font-size: $titleSize;
+           color: $titleColor;
+           width: 380px;
+           margin-bottom: 20px;
+       }
+   }
+   button{
+    width: 230px;
+    height: 50px;
+    background-color: $red;
+    color: #fff;
+    border-radius: $radius;
+    font-size: $regular;
+    cursor: pointer;
+    box-shadow: 1px 8px 10px $red;
+   }
+}
+
+@media screen and (max-width:630px){
+    .feature{
+        flex-direction: column;
+        &-title{
+            h1{
+                width: 100%;
+            }
+        }
+        button{
+            margin-top: 20px;
+        }
+    }
+}

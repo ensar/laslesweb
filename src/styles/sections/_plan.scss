@@ -1,0 +1,74 @@
+.plan{
+    .head{
+        text-align: center;
+        h2{
+            font-size: $titleSize;
+            color:$titleColor;
+            margin-bottom: 20px;
+        }
+        p{
+            margin-bottom: 60px;
+        }
+    }
+    &-boxes{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        .plan-box{
+            width:330px;
+            height:600px;
+            border:1px solid $color;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-radius: $radius;
+            margin-bottom: 20px;
+            &:not(:last-child){
+                margin-right: 50px;
+            }
+            &:last-child{
+                border:1px solid $red;
+            }
+            .plan-img{
+                width:145px;
+                height: 165px;
+                margin-top: 50px;
+            }
+            h3{
+                margin-top:15px;
+                font-size: $regular;
+                color:$titleColor;
+            }
+            .plan-check{
+                margin-top: 40px;
+                margin-bottom: 120px;
+                .check{
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 10px;
+                }
+            }
+            button{
+                border:1px solid $red;
+                width: 175px;
+                height: 45px;
+                border-radius: 50px;
+                color:$red;
+                font-size: $regular;
+                cursor: pointer;
+                transition: 200ms;
+                background-color: transparent;
+                &:hover{
+                    background-color: $red;
+                    color:#fff;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:710px){
+    .plan-box{
+        margin-right: 0 !important;
+    }
+}

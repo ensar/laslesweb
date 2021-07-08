@@ -1,0 +1,91 @@
+.customer{
+    &-head{
+        text-align: center;
+        h1{
+            font-size: $titleSize;
+            color: $titleColor;
+            width: 450px;
+            margin:20px auto;
+        }
+        p{
+            text-align: center;
+        }
+    }
+    &-boxes{
+        display: flex;
+        margin-top: 60px;
+        overflow-x: auto;
+        .customer-box{
+            min-width: 400px;
+            height: 230px;
+            padding: 20px;
+            justify-content: space-around;
+            .box-head{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .customer-person{
+                    display: flex;
+                    align-items: center;
+                    img{
+                        margin-right: 10px;
+                    }
+                    .customer-name{
+                        p{
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+            .customer-comment{
+                margin-top: 20px;
+            }
+        }
+    }
+    &-buttons{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        .indicators{
+            span{
+                width: 15px;
+                height: 15px;
+                display: inline-block;
+                border-radius: 50%;
+                background-color:#ddd;
+                &:first-child{
+                    width: 45px;
+                    background-color: $red;
+                    border-radius: 4px;
+                }
+            }
+        }
+        .buttons{
+            button{
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                font-size: 30px;
+                border: 1px solid $red;
+                color: $red;
+                cursor: pointer;
+                &:hover{
+                    color:#fff;
+                    background-color:$red;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:400px){
+    .customer-head{
+        h1{
+            width: 100%;
+        }
+    }
+    .customer-box{
+        width: 100%;
+    }
+}
